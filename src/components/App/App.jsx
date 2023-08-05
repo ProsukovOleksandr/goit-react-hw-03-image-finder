@@ -4,7 +4,7 @@ import { Searchbar } from 'components/Searchbar/Searchbar';
 import { ImageGallery } from 'components/ImageGallery/ImageGallery';
 import { Button } from 'components/Button/Button';
 import { Loader } from 'components/Loader/Loader';
-import { getPhoto } from 'components/Api';
+import { getPhoto } from 'Api';
 import Notiflix from 'notiflix';
 
 export class App extends Component {
@@ -68,9 +68,9 @@ export class App extends Component {
     return (
       <Container>        
         <Searchbar onSubmit={this.formSubmit} />
-        {isLoading && <Loader />}
-        {arrayLength!==0 && <ImageGallery images={images} />}        
-        {isButton && <Button onClick={this.loadMoreImages } />}
+        {arrayLength!==0 && <ImageGallery images={images} />}  
+        {isLoading && <Loader/>}      
+        {!isLoading && (isButton && <Button onClick={this.loadMoreImages } />)}
       </Container>
     );
   } 

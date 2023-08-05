@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { Overlay, ModalEl, Image } from './Modal.styled';
+import PropTypes from "prop-types";
 export class Modal extends Component  {
     componentDidMount() {
         window.addEventListener('keydown', this.keyDown)
@@ -30,4 +31,9 @@ export class Modal extends Component  {
             </Overlay>
         );
     }   
+}
+Modal.propTypes = {
+    onClose: PropTypes.func.isRequired,
+    largeImageURL: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
 }

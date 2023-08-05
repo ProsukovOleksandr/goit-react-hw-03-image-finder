@@ -19,5 +19,4 @@ export const ImageGallery = ({ images }) => {
 
 ImageGallery.propTypes = {
     images: PropTypes.array,
-    id: PropTypes.number,
 };

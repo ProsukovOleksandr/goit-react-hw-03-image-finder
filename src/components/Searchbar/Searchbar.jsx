@@ -47,13 +47,5 @@ export class Searchbar extends Component{
 }
 
 Searchbar.propTypes = {
-    onSubmit: PropTypes.func,
-    type: PropTypes.string,
-    name: PropTypes.string,
-    value: PropTypes.string,
-    onChange: PropTypes.func,
-    autoComplete: PropTypes.string,
-    autoFocus: PropTypes.bool,
-    placeholder: PropTypes.string,
-    required: PropTypes.bool,
+    onSubmit: PropTypes.func
 }
